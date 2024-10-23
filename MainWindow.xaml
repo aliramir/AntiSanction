@@ -1,0 +1,111 @@
+﻿<Window
+    x:Class="AntiSanction.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AntiSanction"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="تحریــــم شکــــن"
+    Width="270"
+    Height="190"
+    AllowsTransparency="True"
+    Background="Transparent"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Border
+        Padding="2"
+        Background="#E9E9E9"
+        BorderBrush="#9E9E9E"
+        BorderThickness="2"
+        CornerRadius="15,15,5,5">
+        <Grid Margin="0,0,0,6">
+            <Grid
+                Height="30"
+                VerticalAlignment="Top"
+                Loaded="Grid_Loaded">
+                <Button
+                    Width="20"
+                    Height="20"
+                    Margin="5,5,0,1"
+                    HorizontalAlignment="Left"
+                    Background="#E9E9E9"
+                    BorderBrush="#E9E9E9"
+                    Click="Button_Click"
+                    Content="X" />
+            </Grid>
+
+            <StackPanel>
+                <Label
+                    Margin="5,5,0,1"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    FontFamily="{StaticResource Samim}">
+                    انتخاب سرور
+                </Label>
+                <ComboBox
+                    Name="ServerList"
+                    Width="238"
+                    Height="30"
+                    Margin="5"
+                    FlowDirection="RightToLeft"
+                    FontFamily="{StaticResource Samim}"
+                    IsSelected="True"
+                    Text="لیست سرورها">
+                    <ComboBoxItem Content="شکن" IsSelected="True" />
+                    <ComboBoxItem Content="403 آنلاین" />
+                    <ComboBoxItem Content="بگذر" />
+                    <ComboBoxItem Content="رادار گیم" />
+                    <ComboBoxItem Content="الکتروم" />
+                    <ComboBoxItem Content="پیشگامان" />
+                    <ComboBoxItem Content="شاتل" />
+                    <ComboBoxItem Content="هاست ایران" />
+                </ComboBox>
+                <Button
+                    Name="changeDnsBtn"
+                    Width="240"
+                    Height="30"
+                    Margin="5"
+                    Background="White"
+                    Click="changeDnsBtn_Click"
+                    Content="انتخاب دی‌ان‌اس"
+                    FontFamily="{StaticResource Samim}">
+
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button
+                    Name="UnsetBtn"
+                    Width="240"
+                    Height="30"
+                    Margin="5"
+                    Background="White"
+                    Click="UnsetBtn_Click"
+                    FontFamily="{StaticResource Samim}">
+                    <TextBlock Foreground="PaleVioletRed" Text="پاکسازی دی‌ان‌اس" />
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <TextBlock Margin="5" Name="TextBlockWithHyperlink" FlowDirection="RightToLeft" TextAlignment="Center">
+    طراحی شده با 💙 توسط 
+    <Hyperlink
+        NavigateUri="https://zarinafzar.com"
+        RequestNavigate="Hyperlink_RequestNavigate">
+        زرین‌افزار
+    </Hyperlink> 😍
+                </TextBlock>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

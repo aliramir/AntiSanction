@@ -1,0 +1,12 @@
+﻿<Application
+    x:Class="AntiSanction.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AntiSanction"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="Samim">pack://application:,,,/Fonts/#Samim</FontFamily>
+        <!--<FontFamily x:Key="NotoSansSymbols">pack://application:,,,/Fonts/#Noto Sans Symbols</FontFamily>-->
+    </Application.Resources>
+</Application>
